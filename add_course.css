@@ -1,0 +1,258 @@
+:root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --light: #ecf0f1;
+    --text: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: #f4f7f6;
+}
+header {
+        
+    background: linear-gradient(135deg, #1a2a6c, #2c3e50); 
+    padding: 1.5rem 0;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid #3498db; 
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.university-logo {
+    height: 80px; 
+    width: auto;
+    background: white; 
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.university-logo:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+.title-box {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid rgba(255, 255, 255, 0.2); 
+    padding-left: 25px;
+}
+
+header h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.2rem;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.tagline {
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 0.9rem;
+    color: #3498db;     
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .title-box {
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+    }
+    header h1 {
+        font-size: 1.6rem;
+    }
+}
+nav {
+    background: #34495e;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    transition: background 0.3s ease;
+}
+nav a:hover {
+    background: var(--accent);
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+}
+#note{
+    align-items: center;
+    text-align: center;
+}
+
+#notes{
+    align-items: center;
+    resize: none;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    
+}
+
+.main-header {
+    background-color: #1a305e; 
+    color: white;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.title-container h1 {
+    margin: 0;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+}
+
+.title-container p {
+    margin: 5px 0 0 0;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    color: #a0c4ff;
+}
+
+.navbar {
+    background-color: #465a7e;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    display: block;
+}
+
+.navbar a:hover, .navbar a.active {
+    background-color: #354766;
+}
+
+
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 4px;
+}
+
+h2 { font-weight: 500; margin-bottom: 5px; }
+.subtitle { color: #666; margin-top: 0; }
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--primary);
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    position: bottom;
+}
+@media (max-width: 600px) {
+    nav { flex-direction: column; text-align: center; }
+    table { font-size: 0.85rem; }
+}
+.checkbox{
+    position: relative;
+    font-size: 1.6em;
+    color: #222;
+    display: block;
+    padding-left: 45px;
+    margin-bottom: .55em;
+    cursor: pointer;
+
+}
+.checkbox input{
+    position: absolute;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+.check{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border: 2px solid #e7e7e7;
+    border-radius: 50% ;
+    top: 0;
+    left: 0;
+
+}
+.checkbox:hover input ~.check{
+    border-color: transparent ;
+    background-color: #ededed;
+}
+.checkbox input : .checked  ~.check{
+        background-color: #1a2a6c;
+
+}
+.check :: after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 12px;
+    border: solid cornflowerblue;
+    border-width:0 3px 3px 0 ;
+    left:9px ;
+    top: 4px;
+    transform: rotate(45 deg);
+
+}
+.checkbox input:focus ~.check{
+    box-shadow: 0 0 0 4px rgb(26, 14, 74);
+}
+.add
+{
+    color: rgb(26, 14, 74);
+    padding-top: 10px;
+    text-align: center;
+    font-size: 40px;
+    font-family: sans-serif;
+}
